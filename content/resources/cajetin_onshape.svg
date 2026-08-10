@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="124.40000000000003mm" viewBox="0 0 180 124.40000000000003">
+<rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
+<text x="6.00" y="9.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="4.4" font-weight="bold" fill="#22425c" text-anchor="start">EL CAJETÍN DE ONSHAPE ESTÁ EN INGLÉS</text>
+<text x="6.00" y="15.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#1a1a1a" text-anchor="start">La plantilla estándar rotula en inglés aunque el programa esté en español. No es un fallo: es el idioma</text>
+<text x="6.00" y="20.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#1a1a1a" text-anchor="start">de la documentación técnica, y lo vas a encontrar en cualquier plano de cualquier empresa.</text>
+<rect x="10.00" y="30.00" width="160.00" height="34.00" rx="0.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="72.00" y1="30.00" x2="72.00" y2="64.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="10.00" y1="42.00" x2="72.00" y2="42.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="10.00" y1="52.00" x2="72.00" y2="52.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<text x="12.00" y="34.60" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">UNLESS OTHERWISE SPECIFIED,</text>
+<text x="12.00" y="38.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">DIMENSIONS ARE IN MILLIMETERS</text>
+<text x="12.00" y="47.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.2" font-weight="normal" fill="#8a8a8a" text-anchor="start">DO NOT SCALE DRAWING</text>
+<text x="12.00" y="57.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.2" font-weight="bold" fill="#22425c" text-anchor="start">FIRST ANGLE PROJECTION</text>
+<circle cx="59.00" cy="58.00" r="3.40" fill="none" stroke="#1a1a1a" stroke-width="0.18"/>
+<circle cx="59.00" cy="58.00" r="1.70" fill="none" stroke="#1a1a1a" stroke-width="0.18"/>
+<polygon points="46.00,54.60 54.00,56.30 54.00,59.70 46.00,61.40" fill="none" stroke="#1a1a1a" stroke-width="0.18" stroke-linejoin="round"/>
+<line x1="72.00" y1="44.00" x2="170.00" y2="44.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="72.00" y1="54.00" x2="170.00" y2="54.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="132.00" y1="44.00" x2="132.00" y2="54.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<text x="74.00" y="34.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">MATERIAL</text>
+<text x="74.00" y="39.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#1a1a1a" text-anchor="start">ACERO</text>
+<text x="74.00" y="48.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">TITLE</text>
+<text x="92.00" y="52.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.4" font-weight="bold" fill="#1a1a1a" text-anchor="start">PLACA LATERAL</text>
+<line x1="72.00" y1="54.00" x2="72.00" y2="64.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<text x="74.00" y="57.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">SIZE</text>
+<text x="74.00" y="62.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#1a1a1a" text-anchor="start">A4</text>
+<line x1="104.67" y1="54.00" x2="104.67" y2="64.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<text x="106.67" y="57.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">SCALE</text>
+<text x="106.67" y="62.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#1a1a1a" text-anchor="start">1:2</text>
+<line x1="137.33" y1="54.00" x2="137.33" y2="64.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<text x="139.33" y="57.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">SHEET</text>
+<text x="139.33" y="62.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#1a1a1a" text-anchor="start">1 of 1</text>
+<text x="10.00" y="70.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.2" font-weight="bold" fill="#22425c" text-anchor="start">QUÉ SIGNIFICA CADA CASILLA</text>
+<text x="12.00" y="76.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#2c6fb0" text-anchor="start">TITLE</text>
+<text x="44.00" y="76.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#1a1a1a" text-anchor="start">Título</text>
+<text x="84.00" y="76.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#8a8a8a" text-anchor="start">— el nombre de tu pieza</text>
+<text x="12.00" y="82.40" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#2c6fb0" text-anchor="start">DRAWN</text>
+<text x="44.00" y="82.40" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#1a1a1a" text-anchor="start">Dibujado por</text>
+<text x="84.00" y="82.40" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#8a8a8a" text-anchor="start">— aquí va tu nombre</text>
+<text x="12.00" y="88.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#2c6fb0" text-anchor="start">MATERIAL</text>
+<text x="44.00" y="88.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#1a1a1a" text-anchor="start">Material</text>
+<text x="84.00" y="88.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#8a8a8a" text-anchor="start">— de qué es la pieza</text>
+<text x="12.00" y="95.20" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#2c6fb0" text-anchor="start">SIZE</text>
+<text x="44.00" y="95.20" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#1a1a1a" text-anchor="start">Formato</text>
+<text x="84.00" y="95.20" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#8a8a8a" text-anchor="start">— A4, A3…</text>
+<text x="12.00" y="101.60" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#2c6fb0" text-anchor="start">SCALE</text>
+<text x="44.00" y="101.60" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#1a1a1a" text-anchor="start">Escala</text>
+<text x="84.00" y="101.60" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#8a8a8a" text-anchor="start">— 1:1, 1:2, 2:1…</text>
+<text x="12.00" y="108.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#2c6fb0" text-anchor="start">SHEET</text>
+<text x="44.00" y="108.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="bold" fill="#1a1a1a" text-anchor="start">Hoja</text>
+<text x="84.00" y="108.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#8a8a8a" text-anchor="start">— 1 of 1 = hoja 1 de 1</text>
+<text x="12.00" y="116.40" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#22425c" text-anchor="start">Y el símbolo del cono: dice que el plano está en PRIMER DIEDRO, que es el que has usado en las láminas.</text>
+</svg>

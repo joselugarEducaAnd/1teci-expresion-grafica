@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="160mm" viewBox="0 0 180 160">
+<rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
+<text x="6.00" y="9.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="4.4" font-weight="bold" fill="#22425c" text-anchor="start">LOS EJES ISOMÉTRICOS</text>
+<text x="6.00" y="15.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#1a1a1a" text-anchor="start">Tres ejes a 120° entre sí. Sobre ellos se miden las tres dimensiones de la pieza sin reducir nada.</text>
+<line x1="45.00" y1="68.00" x2="45.00" y2="38.00" stroke="#22425c" stroke-width="0.5" stroke-linecap="round"/>
+<polygon points="45.00,38.00 46.01,40.39 43.99,40.39" fill="#22425c" stroke="#22425c" stroke-width="0" stroke-linejoin="round"/>
+<text x="45.00" y="31.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#22425c" text-anchor="middle">Z (altura)</text>
+<line x1="45.00" y1="68.00" x2="70.98" y2="83.00" stroke="#22425c" stroke-width="0.5" stroke-linecap="round"/>
+<polygon points="70.98,83.00 68.40,82.68 69.41,80.93" fill="#22425c" stroke="#22425c" stroke-width="0" stroke-linejoin="round"/>
+<text x="77.91" y="88.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#22425c" text-anchor="middle">X (anchura)</text>
+<line x1="45.00" y1="68.00" x2="19.02" y2="83.00" stroke="#22425c" stroke-width="0.5" stroke-linecap="round"/>
+<polygon points="19.02,83.00 20.59,80.93 21.60,82.68" fill="#22425c" stroke="#22425c" stroke-width="0" stroke-linejoin="round"/>
+<text x="12.09" y="88.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#22425c" text-anchor="middle">Y (fondo)</text>
+<polyline points="45.00,55.00 46.13,55.05 47.26,55.20 48.36,55.44 49.45,55.78 50.49,56.22 51.50,56.74 52.46,57.35 53.36,58.04 54.19,58.81 54.96,59.64 55.65,60.54 56.26,61.50 56.78,62.51 57.22,63.55 57.56,64.64 57.80,65.74 57.95,66.87 58.00,68.00 57.95,69.13 57.80,70.26 57.56,71.36 57.22,72.45 56.78,73.49 56.26,74.50" fill="none" stroke="#8a8a8a" stroke-width="0.18" stroke-linejoin="round"/>
+<text x="60.00" y="59.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.6" font-weight="normal" fill="#8a8a8a" text-anchor="start">120°</text>
+<polygon points="118.00,38.00 137.05,49.00 118.00,60.00 98.95,49.00" fill="#ffffff" stroke="#1a1a1a" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="98.95,49.00 118.00,60.00 118.00,82.00 98.95,71.00" fill="#ffffff" stroke="#1a1a1a" stroke-width="0.5" stroke-linejoin="round"/>
+<polygon points="137.05,49.00 118.00,60.00 118.00,82.00 137.05,71.00" fill="#ffffff" stroke="#1a1a1a" stroke-width="0.5" stroke-linejoin="round"/>
+<text x="118.00" y="108.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.7" font-weight="normal" fill="#8a8a8a" text-anchor="middle">Un prisma: cada arista va paralela a un eje</text>
+<circle cx="45.00" cy="128.00" r="14.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="45.00" y="152.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.7" font-weight="normal" fill="#8a8a8a" text-anchor="middle">En la vista, un agujero es un CÍRCULO</text>
+<text x="88.00" y="130.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="6" font-weight="normal" fill="#22425c" text-anchor="middle">→</text>
+<ellipse cx="132.00" cy="128.00" rx="14.00" ry="8.10" transform="rotate(30 132.00 128.00)" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<text x="132.00" y="152.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.7" font-weight="normal" fill="#8a8a8a" text-anchor="middle">En isométrica se convierte en una ELIPSE</text>
+</svg>

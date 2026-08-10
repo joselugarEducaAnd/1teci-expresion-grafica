@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="190mm" height="354mm" viewBox="0 0 190 354">
+<rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
+<text x="6.00" y="9.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="4.4" font-weight="bold" fill="#22425c" text-anchor="start">CUATRO ERRORES DE ACOTACIÓN QUE SE REPITEN TODOS LOS AÑOS</text>
+<text x="6.00" y="15.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.9" font-weight="normal" fill="#1a1a1a" text-anchor="start">La misma placa, acotada mal y acotada bien. Compara y busca la diferencia antes de leer la explicación.</text>
+<text x="6.00" y="27.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.4" font-weight="bold" fill="#22425c" text-anchor="start">La misma cota, dos veces</text>
+<text x="10.00" y="33.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#8a4b2a" text-anchor="start">✗  ASÍ NO</text>
+<rect x="18.00" y="42.00" width="50.00" height="30.00" rx="0.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<circle cx="36.00" cy="57.00" r="5.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="28.00" y1="57.00" x2="44.00" y2="57.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="36.00" y1="49.00" x2="36.00" y2="65.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="18.00" y1="78.00" x2="18.00" y2="81.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="68.00" y1="78.00" x2="68.00" y2="81.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="18.00" y1="80.00" x2="68.00" y2="80.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="18.00,80.00 20.20,79.30 20.20,80.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="68.00,80.00 65.80,79.30 65.80,80.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="43.00" y="78.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">50</text>
+<line x1="18.00" y1="34.00" x2="18.00" y2="37.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="68.00" y1="34.00" x2="68.00" y2="37.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="18.00" y1="36.00" x2="68.00" y2="36.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="18.00,36.00 20.20,35.30 20.20,36.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="68.00,36.00 65.80,35.30 65.80,36.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="43.00" y="34.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">50</text>
+<line x1="9.00" y1="42.00" x2="12.00" y2="42.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="9.00" y1="72.00" x2="12.00" y2="72.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="11.00" y1="42.00" x2="11.00" y2="72.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="11.00,42.00 10.30,44.20 11.70,44.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="11.00,72.00 10.30,69.80 11.70,69.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="9.80" y="57.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 9.80 57.00)">30</text>
+<text x="98.00" y="33.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#0e5a63" text-anchor="start">✓  ASÍ SÍ</text>
+<rect x="106.00" y="42.00" width="50.00" height="30.00" rx="0.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<circle cx="124.00" cy="57.00" r="5.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="116.00" y1="57.00" x2="132.00" y2="57.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="124.00" y1="49.00" x2="124.00" y2="65.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="106.00" y1="78.00" x2="106.00" y2="81.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="156.00" y1="78.00" x2="156.00" y2="81.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="106.00" y1="80.00" x2="156.00" y2="80.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="106.00,80.00 108.20,79.30 108.20,80.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="156.00,80.00 153.80,79.30 153.80,80.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="131.00" y="78.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">50</text>
+<line x1="97.00" y1="42.00" x2="100.00" y2="42.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="97.00" y1="72.00" x2="100.00" y2="72.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="99.00" y1="42.00" x2="99.00" y2="72.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="99.00,42.00 98.30,44.20 99.70,44.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="99.00,72.00 98.30,69.80 99.70,69.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="97.80" y="57.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 97.80 57.00)">30</text>
+<text x="6.00" y="98.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#8a8a8a" text-anchor="start">Si una medida cambia, hay que corregirla en dos sitios. Tarde o temprano una se queda vieja.</text>
+<text x="6.00" y="109.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.4" font-weight="bold" fill="#22425c" text-anchor="start">La cadena cerrada</text>
+<text x="10.00" y="115.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#8a4b2a" text-anchor="start">✗  ASÍ NO</text>
+<rect x="18.00" y="124.00" width="50.00" height="30.00" rx="0.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<circle cx="36.00" cy="139.00" r="5.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="28.00" y1="139.00" x2="44.00" y2="139.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="36.00" y1="131.00" x2="36.00" y2="147.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="18.00" y1="169.00" x2="18.00" y2="172.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="68.00" y1="169.00" x2="68.00" y2="172.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="18.00" y1="171.00" x2="68.00" y2="171.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="18.00,171.00 20.20,170.30 20.20,171.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="68.00,171.00 65.80,170.30 65.80,171.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="43.00" y="169.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">50</text>
+<line x1="9.00" y1="124.00" x2="12.00" y2="124.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="9.00" y1="154.00" x2="12.00" y2="154.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="11.00" y1="124.00" x2="11.00" y2="154.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="11.00,124.00 10.30,126.20 11.70,126.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="11.00,154.00 10.30,151.80 11.70,151.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="9.80" y="139.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 9.80 139.00)">30</text>
+<line x1="18.00" y1="160.00" x2="18.00" y2="163.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="36.00" y1="160.00" x2="36.00" y2="163.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="18.00" y1="162.00" x2="36.00" y2="162.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="18.00,162.00 20.20,161.30 20.20,162.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="36.00,162.00 33.80,161.30 33.80,162.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="27.00" y="160.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">18</text>
+<line x1="36.00" y1="160.00" x2="36.00" y2="163.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="68.00" y1="160.00" x2="68.00" y2="163.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="36.00" y1="162.00" x2="68.00" y2="162.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="36.00,162.00 38.20,161.30 38.20,162.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="68.00,162.00 65.80,161.30 65.80,162.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="52.00" y="160.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">32</text>
+<text x="98.00" y="115.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#0e5a63" text-anchor="start">✓  ASÍ SÍ</text>
+<rect x="106.00" y="124.00" width="50.00" height="30.00" rx="0.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<circle cx="124.00" cy="139.00" r="5.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="116.00" y1="139.00" x2="132.00" y2="139.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="124.00" y1="131.00" x2="124.00" y2="147.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="97.00" y1="124.00" x2="100.00" y2="124.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="97.00" y1="154.00" x2="100.00" y2="154.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="99.00" y1="124.00" x2="99.00" y2="154.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="99.00,124.00 98.30,126.20 99.70,126.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="99.00,154.00 98.30,151.80 99.70,151.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="97.80" y="139.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 97.80 139.00)">30</text>
+<line x1="106.00" y1="160.00" x2="106.00" y2="163.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="124.00" y1="160.00" x2="124.00" y2="163.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="106.00" y1="162.00" x2="124.00" y2="162.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="106.00,162.00 108.20,161.30 108.20,162.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="124.00,162.00 121.80,161.30 121.80,162.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="115.00" y="160.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">18</text>
+<line x1="124.00" y1="160.00" x2="124.00" y2="163.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="156.00" y1="160.00" x2="156.00" y2="163.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="124.00" y1="162.00" x2="156.00" y2="162.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="124.00,162.00 126.20,161.30 126.20,162.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="156.00,162.00 153.80,161.30 153.80,162.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="140.00" y="160.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">32</text>
+<text x="6.00" y="180.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#8a8a8a" text-anchor="start">Las parciales y la total juntas sobran: una de las tres siempre acaba sin cuadrar. Se deja fuera la que menos importe.</text>
+<text x="6.00" y="191.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.4" font-weight="bold" fill="#22425c" text-anchor="start">Cotas cruzadas</text>
+<text x="10.00" y="197.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#8a4b2a" text-anchor="start">✗  ASÍ NO</text>
+<rect x="18.00" y="206.00" width="50.00" height="30.00" rx="0.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<circle cx="36.00" cy="221.00" r="5.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="28.00" y1="221.00" x2="44.00" y2="221.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="36.00" y1="213.00" x2="36.00" y2="229.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="18.00" y1="242.00" x2="18.00" y2="245.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="68.00" y1="242.00" x2="68.00" y2="245.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="18.00" y1="244.00" x2="68.00" y2="244.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="18.00,244.00 20.20,243.30 20.20,244.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="68.00,244.00 65.80,243.30 65.80,244.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="43.00" y="242.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">50</text>
+<line x1="9.00" y1="206.00" x2="12.00" y2="206.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="9.00" y1="236.00" x2="12.00" y2="236.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="11.00" y1="206.00" x2="11.00" y2="236.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="11.00,206.00 10.30,208.20 11.70,208.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="11.00,236.00 10.30,233.80 11.70,233.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="9.80" y="221.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 9.80 221.00)">30</text>
+<line x1="18.00" y1="251.00" x2="18.00" y2="254.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="36.00" y1="251.00" x2="36.00" y2="254.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="18.00" y1="253.00" x2="36.00" y2="253.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="18.00,253.00 20.20,252.30 20.20,253.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="36.00,253.00 33.80,252.30 33.80,253.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="27.00" y="251.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">18</text>
+<text x="98.00" y="197.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#0e5a63" text-anchor="start">✓  ASÍ SÍ</text>
+<rect x="106.00" y="206.00" width="50.00" height="30.00" rx="0.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<circle cx="124.00" cy="221.00" r="5.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="116.00" y1="221.00" x2="132.00" y2="221.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="124.00" y1="213.00" x2="124.00" y2="229.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="106.00" y1="251.00" x2="106.00" y2="254.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="156.00" y1="251.00" x2="156.00" y2="254.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="106.00" y1="253.00" x2="156.00" y2="253.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="106.00,253.00 108.20,252.30 108.20,253.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="156.00,253.00 153.80,252.30 153.80,253.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="131.00" y="251.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">50</text>
+<line x1="97.00" y1="206.00" x2="100.00" y2="206.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="97.00" y1="236.00" x2="100.00" y2="236.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="99.00" y1="206.00" x2="99.00" y2="236.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="99.00,206.00 98.30,208.20 99.70,208.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="99.00,236.00 98.30,233.80 99.70,233.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="97.80" y="221.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 97.80 221.00)">30</text>
+<line x1="106.00" y1="242.00" x2="106.00" y2="245.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="124.00" y1="242.00" x2="124.00" y2="245.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="106.00" y1="244.00" x2="124.00" y2="244.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="106.00,244.00 108.20,243.30 108.20,244.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="124.00,244.00 121.80,243.30 121.80,244.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="115.00" y="242.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">18</text>
+<text x="6.00" y="262.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#8a8a8a" text-anchor="start">Las cotas cortas van pegadas a la pieza y las largas por fuera. Así ninguna línea cruza a otra.</text>
+<text x="6.00" y="273.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.4" font-weight="bold" fill="#22425c" text-anchor="start">El taladro mal acotado</text>
+<text x="10.00" y="279.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#8a4b2a" text-anchor="start">✗  ASÍ NO</text>
+<rect x="18.00" y="288.00" width="50.00" height="30.00" rx="0.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<circle cx="36.00" cy="303.00" r="5.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="28.00" y1="303.00" x2="44.00" y2="303.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="36.00" y1="295.00" x2="36.00" y2="311.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="18.00" y1="324.00" x2="18.00" y2="327.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="68.00" y1="324.00" x2="68.00" y2="327.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="18.00" y1="326.00" x2="68.00" y2="326.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="18.00,326.00 20.20,325.30 20.20,326.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="68.00,326.00 65.80,325.30 65.80,326.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="43.00" y="324.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">50</text>
+<line x1="9.00" y1="288.00" x2="12.00" y2="288.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="9.00" y1="318.00" x2="12.00" y2="318.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="11.00" y1="288.00" x2="11.00" y2="318.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="11.00,288.00 10.30,290.20 11.70,290.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="11.00,318.00 10.30,315.80 11.70,315.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="9.80" y="303.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 9.80 303.00)">30</text>
+<line x1="39.50" y1="299.50" x2="51.00" y2="283.00" stroke="#8a4b2a" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="51.00" y1="283.00" x2="62.00" y2="283.00" stroke="#8a4b2a" stroke-width="0.18" stroke-linecap="round"/>
+<text x="52.00" y="281.70" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#8a4b2a" text-anchor="start">10</text>
+<text x="98.00" y="279.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#0e5a63" text-anchor="start">✓  ASÍ SÍ</text>
+<rect x="106.00" y="288.00" width="50.00" height="30.00" rx="0.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<circle cx="124.00" cy="303.00" r="5.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+<line x1="116.00" y1="303.00" x2="132.00" y2="303.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="124.00" y1="295.00" x2="124.00" y2="311.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="97.00" y1="288.00" x2="100.00" y2="288.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="97.00" y1="318.00" x2="100.00" y2="318.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="99.00" y1="288.00" x2="99.00" y2="318.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="99.00,288.00 98.30,290.20 99.70,290.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="99.00,318.00 98.30,315.80 99.70,315.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="97.80" y="303.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 97.80 303.00)">30</text>
+<line x1="127.50" y1="299.50" x2="139.00" y2="283.00" stroke="#0e5a63" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="139.00" y1="283.00" x2="150.00" y2="283.00" stroke="#0e5a63" stroke-width="0.18" stroke-linecap="round"/>
+<text x="140.00" y="281.70" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#0e5a63" text-anchor="start">Ø10</text>
+<line x1="166.00" y1="288.00" x2="163.00" y2="288.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="166.00" y1="303.00" x2="163.00" y2="303.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="164.00" y1="288.00" x2="164.00" y2="303.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="164.00,288.00 163.30,290.20 164.70,290.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="164.00,303.00 163.30,300.80 164.70,300.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="162.80" y="295.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 162.80 295.50)">15</text>
+<line x1="106.00" y1="324.00" x2="106.00" y2="327.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="124.00" y1="324.00" x2="124.00" y2="327.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="106.00" y1="326.00" x2="124.00" y2="326.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="106.00,326.00 108.20,325.30 108.20,326.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="124.00,326.00 121.80,325.30 121.80,326.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="115.00" y="324.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">18</text>
+<text x="6.00" y="344.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#8a8a8a" text-anchor="start">Sin el símbolo Ø no se sabe si son 10 de diámetro o de radio, y sin las cotas de posición no se sabe dónde va.</text>
+</svg>
