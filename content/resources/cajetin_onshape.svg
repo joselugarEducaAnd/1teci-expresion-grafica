@@ -19,6 +19,9 @@
 <line x1="132.00" y1="44.00" x2="132.00" y2="54.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
 <text x="74.00" y="34.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">MATERIAL</text>
 <text x="74.00" y="39.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#1a1a1a" text-anchor="start">ACERO</text>
+<line x1="132.00" y1="30.00" x2="132.00" y2="44.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>
+<text x="134.00" y="34.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">DRAWN</text>
+<text x="134.00" y="39.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.0" font-weight="bold" fill="#1a1a1a" text-anchor="start">TU NOMBRE</text>
 <text x="74.00" y="48.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.0" font-weight="normal" fill="#8a8a8a" text-anchor="start">TITLE</text>
 <text x="92.00" y="52.00" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="3.4" font-weight="bold" fill="#1a1a1a" text-anchor="start">PLACA LATERAL</text>
 <line x1="72.00" y1="54.00" x2="72.00" y2="64.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round"/>

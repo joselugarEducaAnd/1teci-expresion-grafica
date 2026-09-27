@@ -172,6 +172,12 @@
 <circle cx="124.00" cy="303.00" r="5.00" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
 <line x1="116.00" y1="303.00" x2="132.00" y2="303.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
 <line x1="124.00" y1="295.00" x2="124.00" y2="311.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
+<line x1="106.00" y1="333.00" x2="106.00" y2="336.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="156.00" y1="333.00" x2="156.00" y2="336.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="106.00" y1="335.00" x2="156.00" y2="335.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<polygon points="106.00,335.00 108.20,334.30 108.20,335.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="156.00,335.00 153.80,334.30 153.80,335.70" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
+<text x="131.00" y="333.80" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle">50</text>
 <line x1="97.00" y1="288.00" x2="100.00" y2="288.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
 <line x1="97.00" y1="318.00" x2="100.00" y2="318.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
 <line x1="99.00" y1="288.00" x2="99.00" y2="318.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
@@ -187,6 +193,8 @@
 <polygon points="164.00,288.00 163.30,290.20 164.70,290.20" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
 <polygon points="164.00,303.00 163.30,300.80 164.70,300.80" fill="#2c6fb0" stroke="#2c6fb0" stroke-width="0" stroke-linejoin="round"/>
 <text x="162.80" y="295.50" font-family="Verdana, 'DejaVu Sans', Arial, sans-serif" font-size="2.8" font-weight="normal" fill="#2c6fb0" text-anchor="middle" transform="rotate(-90 162.80 295.50)">15</text>
+<line x1="157.00" y1="288.00" x2="163.00" y2="288.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
+<line x1="132.00" y1="303.00" x2="166.00" y2="303.00" stroke="#1a1a1a" stroke-width="0.18" stroke-linecap="round" stroke-dasharray="4,1.2,0.8,1.2"/>
 <line x1="106.00" y1="324.00" x2="106.00" y2="327.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
 <line x1="124.00" y1="324.00" x2="124.00" y2="327.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
 <line x1="106.00" y1="326.00" x2="124.00" y2="326.00" stroke="#2c6fb0" stroke-width="0.18" stroke-linecap="round"/>
