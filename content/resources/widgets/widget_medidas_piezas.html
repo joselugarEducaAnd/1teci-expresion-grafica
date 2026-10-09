@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Las medidas de tu pieza</title>
+<style>
+:root{
+  --chrome:#22425c; --chrome-osc:#163049; --chrome-tinte:#eaeef2;
+  --chrome-linea:#cdd6de; --cota:#2c6fb0; --tinta:#1a1a1a;
+  --gris:#6f6f76; --papel:#ffffff; --fondo:#f7f7fa; --enc:#8a3b96;
+  --fuente:Verdana,'DejaVu Sans',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--fuente);color:var(--tinta);background:var(--papel);
+  font-size:13px;line-height:1.4;padding:10px 12px 12px;overflow-x:hidden}
+h1{font-size:16px;color:var(--chrome);margin:0 0 2px}
+.sub{font-size:11.5px;color:var(--gris);margin:0 0 9px}
+.barra{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.barra .grupo{display:flex;gap:4px;flex-wrap:wrap}
+label{font-weight:bold;color:var(--chrome-osc)}
+button,input{font:inherit;min-height:30px;border:1px solid var(--chrome);border-radius:5px;
+  background:#fff;color:var(--chrome);padding:4px 9px}
+button{cursor:pointer}
+button:hover{background:var(--chrome);color:#fff}
+button[aria-pressed="true"]{background:var(--chrome);color:#fff}
+input{width:64px;color:var(--enc);border-color:var(--enc)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--cota);outline-offset:2px}
+.principal{display:grid;grid-template-columns:minmax(300px,1.35fr) minmax(220px,.65fr);gap:10px}
+.zona{border:1px solid var(--chrome-linea);border-radius:7px;background:var(--papel);padding:8px;min-width:0}
+svg{display:block;width:100%;height:auto;background:var(--fondo);border-radius:5px;touch-action:manipulation}
+.cara{fill:#fff;stroke:var(--tinta);stroke-width:.55;stroke-linejoin:round}
+.trazo{fill:none;stroke:var(--tinta);stroke-width:.55;stroke-linejoin:round}
+.hueco{fill:#e9e9ee;stroke:var(--tinta);stroke-width:.55}
+.centro{stroke:#9a9aa3;stroke-width:.2;stroke-dasharray:1.6 .5 .3 .5}
+.toque{fill:none;stroke:transparent;stroke-width:3.2;cursor:pointer;pointer-events:stroke}
+.toque.area{fill:transparent;pointer-events:all}
+.toque:hover+.marca,.toque:focus+.marca{stroke:#7fa9d6}
+.marca{fill:none;stroke:transparent;stroke-width:.85;pointer-events:none;stroke-linecap:round}
+.marca.sel{stroke:var(--cota)}
+.burbuja rect{fill:#fff;stroke:var(--cota);stroke-width:.3}
+.burbuja text{font-size:3.3px;fill:var(--cota);font-weight:bold;text-anchor:middle;
+  dominant-baseline:central;font-family:var(--fuente)}
+.burbuja.enc rect{stroke:var(--enc)} .burbuja.enc text{fill:var(--enc);font-style:italic}
+.toque:focus{outline:none}
+.eje-ref{stroke:#4f86bd;stroke-width:.3;stroke-dasharray:2.2 .6 .4 .6;fill:none}
+.cota-ref{stroke:var(--cota);stroke-width:.35}
+.cota-ref.enc{stroke:var(--enc)}
+.punto-ref{fill:var(--cota)} .punto-ref.enc{fill:var(--enc)}
+label.chk{font-weight:normal;color:var(--chrome-osc);display:flex;align-items:center;gap:5px}
+label.chk input{width:auto;min-height:0}
+.panel h2{font-size:13px;color:var(--chrome);margin:0 0 4px}
+.panel .valor{font-size:20px;font-weight:bold;color:var(--cota);margin:2px 0}
+.panel .valor.enc{color:var(--enc);font-style:italic}
+.panel p{margin:4px 0;font-size:12px}
+.leyenda{font-size:11px;color:var(--gris);margin:8px 0 0}
+.nota{font-size:11px;color:var(--chrome-osc);background:var(--chrome-tinte);border-radius:5px;
+  padding:6px 8px;margin-top:8px}
+@media(max-width:700px){.principal{grid-template-columns:1fr}svg{max-height:430px}}
+</style>
+</head>
+<body>
+<h1>Las medidas de tu pieza</h1>
+<p class="sub">Toca una arista, un borde o un taladro y aparece lo que mide. Al tocar un taladro salen además sus ejes y las distancias que sitúan su centro. Vuelve a tocarlo para quitarlo. La pieza no gira: las vistas las sacas tú.</p>
+
+<div class="barra">
+  <label>Pieza</label>
+  <div class="grupo" id="botonesPieza" role="group" aria-label="Elige la pieza"></div>
+</div>
+<div class="barra">
+  <label for="inE">Tu e</label><input id="inE" type="number" min="1" max="30" step="1" inputmode="numeric" placeholder="e">
+  <label for="inT">Tu t</label><input id="inT" type="number" min="1" max="20" step="1" inputmode="numeric" placeholder="t">
+  <button type="button" id="borrar">Quitar medidas</button>
+  <label class="chk"><input type="checkbox" id="verPos"> Ver siempre los ejes y la posición de los taladros</label>
+</div>
+
+<div class="principal">
+  <section class="zona">
+    <svg id="dibujo" role="img" aria-label="Perspectiva isométrica fija de la pieza. Cada arista, borde y taladro se puede seleccionar con el ratón, el dedo o el tabulador."></svg>
+    <p class="leyenda">En <b style="color:var(--cota)">azul</b>, lo que es igual para todo el mundo. En <i style="color:var(--enc)"><b>morado</b></i>, tus dos medidas del encargo: <i>e</i> (espesor) y <i>t</i> (taladro). Escríbelas arriba y la pieza se dibuja con ellas.</p>
+  </section>
+  <section class="zona panel" aria-live="polite" id="panel"></section>
+</div>
+<p class="nota">Las medidas en mm. Todos los taladros y la ranura son <b>pasantes</b>: atraviesan la pieza de lado a lado. Con estas medidas tu pieza queda definida por completo; decidir en qué vista va cada cota y dónde colocarla es tu trabajo en las láminas.</p>
+
+<script>
+const PIEZAS = [{"idx": 0, "num": 1, "nombre": "Escuadra en L", "ops": "extrusión + taladros", "esp_es": "grosor de la base", "tal_es": "los dos taladros", "fijas": {"A": 50, "F": 30, "H": 28}, "geo": {"ala": 8, "taladros": [[16, 20], [36, 20]]}, "muestra": {"e": 8, "t": 9}}, {"idx": 1, "num": 2, "nombre": "Brida circular", "ops": "revolución + taladros", "esp_es": "altura del disco", "tal_es": "los tres taladros", "fijas": {"D": 48}, "geo": {"n": 3, "r_circulo": 14, "fase": 0.5235987755982988}, "muestra": {"e": 10, "t": 9}}, {"idx": 2, "num": 3, "nombre": "Polea con garganta", "ops": "revolución", "esp_es": "ancho de la garganta", "tal_es": "el taladro central", "fijas": {"D": 44}, "geo": {"pestana": 4, "profundidad": 7}, "muestra": {"e": 12, "t": 11}}, {"idx": 3, "num": 4, "nombre": "Pletina ranurada", "ops": "extrusión + corte", "esp_es": "grosor de la pletina", "tal_es": "el taladro y el ancho de la ranura", "fijas": {"A": 60, "F": 26}, "geo": {"taladro_x": 13, "ranura_x": [34, 48]}, "muestra": {"e": 8, "t": 10}}, {"idx": 4, "num": 5, "nombre": "Casquillo excéntrico", "ops": "revolución + taladro descentrado", "esp_es": "altura del casquillo", "tal_es": "el taladro descentrado", "fijas": {"D": 40}, "geo": {"excentricidad": 10}, "muestra": {"e": 14, "t": 9}}, {"idx": 5, "num": 6, "nombre": "Horquilla en U", "ops": "extrusión + corte + taladro", "esp_es": "grosor de la base", "tal_es": "el taladro pasante", "fijas": {"A": 46, "F": 34, "H": 30}, "geo": {"ala": 8}, "muestra": {"e": 8, "t": 9}}];
+const C30 = Math.cos(Math.PI / 6), S30 = 0.5, NS = "http://www.w3.org/2000/svg";
+const svg = document.getElementById("dibujo"), panel = document.getElementById("panel");
+const inE = document.getElementById("inE"), inT = document.getElementById("inT");
+const verPos = document.getElementById("verPos");
+let actual = 0, seleccion = new Set();
+
+const P = (x, y, z) => [(x - y) * C30, (x + y) * S30 - z];
+const pts = a => a.map(p => P(...p).map(n => n.toFixed(2)).join(",")).join(" ");
+function el(tag, at, padre) {
+  const n = document.createElementNS(NS, tag);
+  for (const k in at) n.setAttribute(k, at[k]);
+  (padre || svg).appendChild(n); return n;
+}
+function arco(cx, cy, z, r, a0, a1, n = 48) {
+  const o = []; for (let i = 0; i <= n; i++) { const a = a0 + (a1 - a0) * i / n;
+    o.push([cx + r * Math.cos(a), cy + r * Math.sin(a), z]); } return o;
+}
+function arcoYZ(x, cy, cz, r, n = 48) {
+  const o = []; for (let i = 0; i <= n; i++) { const a = 2 * Math.PI * i / n;
+    o.push([x, cy + r * Math.cos(a), cz + r * Math.sin(a)]); } return o;
+}
+function valores() {
+  const p = PIEZAS[actual], e = parseFloat(inE.value), t = parseFloat(inT.value);
+  const eok = e > 0 && e <= 30, tok = t > 0 && t <= 20;
+  return { e: eok ? e : p.muestra.e, t: tok ? t : p.muestra.t, eNum: eok, tNum: tok,
+    E: eok ? fmt(e) : "e", T: tok ? fmt(t) : "t" };
+}
+const fmt = n => (Math.round(n * 10) / 10).toString().replace(".", ",");
+// «28 − e» con letra o con número, según lo que haya escrito la persona
+const menos = (k, v) => v.eNum ? fmt(k - v.e) : `${fmt(k)} − e`;
+
+/* ── Topología de cada pieza, de atrás hacia delante (algoritmo del pintor): lo que
+   se dibuja después tapa lo anterior, y también tapa sus zonas de toque. ── */
+function escena(p, v) {
+  const S = [], f = p.fijas, g = p.geo, e = v.e, r = v.t / 2;
+  const cara = (q, aristas = []) => S.push({ cara: q, aristas });
+  const ar = (a, b, m) => ({ a, b, m });
+  const M = (valor, titulo, texto, enc = false) => ({ valor, titulo, texto, enc });
+  const pasante = (d) => M(`Ø${v.T}`, "Taladro pasante", d, true);
+  const cil = (cx, cy, z0, z1, R, mD, mH) => {
+    const inf = arco(cx, cy, z0, R, -Math.PI / 4, 3 * Math.PI / 4);
+    const sup = arco(cx, cy, z1, R, 3 * Math.PI / 4, -Math.PI / 4);
+    S.push({ cara: inf.concat(sup), curvas: [{ q: inf, m: mD }],
+      aristas: [-Math.PI / 4, 3 * Math.PI / 4].map(a => ar(
+        [cx + R * Math.cos(a), cy + R * Math.sin(a), z0],
+        [cx + R * Math.cos(a), cy + R * Math.sin(a), z1], mH)) });
+    S.push({ cara: arco(cx, cy, z1, R, 0, 2 * Math.PI).slice(0, -1),
+      curvas: [{ q: arco(cx, cy, z1, R, 0, 2 * Math.PI), m: mD }] });
+  };
+  // Referencias de posición de un taladro: ejes (trazo y punto) y la distancia, con
+  // su valor, desde la arista de referencia hasta el CENTRO. Salen al seleccionarlo.
+  const agujero = (q, m, refs = []) => S.push({ hueco: q, m, refs });
+  const rc = (a, b, valor, enc = false) => ({ tipo: "cota", a, b, valor, enc });
+  const re = (a, b) => ({ tipo: "eje", a, b });
+  const cruz = (x, y, z, L) => [re([x - L, y, z], [x + L, y, z]), re([x, y - L, z], [x, y + L, z])];
+
+  if (p.idx === 0) {                                   // escuadra en L
+    const { A, F, H } = f, a = g.ala;
+    const mA = M(fmt(A), "Ancho de la pieza", "De lado a lado. La base y el ala miden lo mismo.");
+    const mAla = M(fmt(a), "Grosor del ala", "El ala vertical está pegada al borde trasero de la base.");
+    const mH = M(fmt(H), "Altura total", "Desde el suelo hasta lo alto del ala.");
+    const mHe = M(menos(H, v), "Altura del ala por encima de la base", `La pieza mide ${fmt(H)} de alto en total; la base, e.`, !v.eNum);
+    const mF = M(fmt(F), "Fondo de la pieza", "De la cara delantera a la trasera.");
+    const mFa = M(fmt(F - a), "Fondo de la base delante del ala", `Fondo total ${fmt(F)} menos el ala, ${fmt(a)}.`);
+    const mE = M(v.E, "Grosor de la base", "Es tu espesor del encargo.", true);
+    cara([[0,0,H],[A,0,H],[A,a,H],[0,a,H]], [ar([0,0,H],[A,0,H],mA), ar([0,0,H],[0,a,H],mAla),
+      ar([A,0,H],[A,a,H],mAla), ar([0,a,H],[A,a,H],mA)]);
+    cara([[0,a,H],[A,a,H],[A,a,e],[0,a,e]], [ar([0,a,e],[0,a,H],mHe), ar([0,a,e],[A,a,e],mA)]);
+    cara([[0,a,e],[A,a,e],[A,F,e],[0,F,e]], [ar([0,a,e],[0,F,e],mFa), ar([0,F,e],[A,F,e],mA)]);
+    g.taladros.forEach(([x, y], k) => agujero(arco(x, y, e, r, 0, 2 * Math.PI),
+      pasante(`Uno de los dos taladros de la base. Su centro está a ${fmt(x)} del borde izquierdo y a ${fmt(F - y)} del borde delantero (${fmt(y)} de la cara trasera).`),
+      [...cruz(x, y, e, r + 2.5), rc([0, y, e], [x, y, e], fmt(x)), rc([x, F, e], [x, y, e], fmt(F - y))]));
+    cara([[A,0,0],[A,0,H],[A,a,H],[A,a,e],[A,F,e],[A,F,0]], [ar([A,0,0],[A,0,H],mH),
+      ar([A,a,e],[A,a,H],mHe), ar([A,a,e],[A,F,e],mFa), ar([A,F,0],[A,F,e],mE), ar([A,0,0],[A,F,0],mF)]);
+    cara([[0,F,e],[A,F,e],[A,F,0],[0,F,0]], [ar([0,F,0],[0,F,e],mE), ar([0,F,0],[A,F,0],mA)]);
+  } else if (p.idx === 1) {                            // brida
+    const R = f.D / 2;
+    cil(R, R, 0, e, R, M(`Ø${fmt(f.D)}`, "Diámetro del disco", "Diámetro exterior de la brida."),
+      M(v.E, "Altura del disco", "Es tu espesor del encargo.", true));
+    const Rc = g.r_circulo, paso = 360 / g.n;
+    const cen = k => { const a = 2 * Math.PI * k / g.n + g.fase; return [R + Rc * Math.cos(a), R + Rc * Math.sin(a), e]; };
+    const am = g.fase + Math.PI / g.n;            // entre los dos primeros taladros
+    const refsB = [...cruz(R, R, e, 4), { tipo: "circ", c: [R, R, e], r: Rc, valor: `Ø${fmt(2 * Rc)}` },
+      ...[...Array(g.n).keys()].map(k => re([R, R, e], cen(k))),
+      { tipo: "texto", p: [R + 7 * Math.cos(am), R + 7 * Math.sin(am), e], valor: `${fmt(paso)}°` }];
+    for (let k = 0; k < g.n; k++) {
+      const [hx, hy] = cen(k);
+      agujero(arco(hx, hy, e, r, 0, 2 * Math.PI),
+        pasante(`Uno de los ${g.n} taladros iguales. Sus centros están en una circunferencia de Ø${fmt(2 * Rc)} con el mismo centro que el disco, repartidos cada ${fmt(paso)}°.`),
+        refsB);
+    }
+  } else if (p.idx === 2) {                            // polea
+    const R = f.D / 2, s = g.pestana, Rg = R - g.profundidad;
+    const mD = M(`Ø${fmt(f.D)}`, "Diámetro de las pestañas", "Las dos pestañas son iguales.");
+    const mS = M(fmt(s), "Grosor de cada pestaña", "Las dos pestañas miden lo mismo.");
+    cil(R, R, 0, s, R, mD, mS);
+    cil(R, R, s, s + e, Rg, M(`Ø${fmt(2 * Rg)}`, "Diámetro del fondo de la garganta",
+      `La garganta entra ${fmt(g.profundidad)} por cada lado desde el borde de las pestañas.`),
+      M(v.E, "Ancho de la garganta", "Es tu espesor del encargo: la distancia entre las dos pestañas.", true));
+    cil(R, R, s + e, 2 * s + e, R, mD, mS);
+    agujero(arco(R, R, 2 * s + e, r, 0, 2 * Math.PI),
+      pasante("Taladro central: su eje es el de la polea y atraviesa las dos pestañas y la garganta."),
+      cruz(R, R, 2 * s + e, R + 2));
+  } else if (p.idx === 3) {                            // pletina
+    const { A, F } = f, yc = F / 2, [r0, r1] = g.ranura_x;
+    const mA = M(fmt(A), "Largo de la pletina", "");
+    const mF = M(fmt(F), "Ancho de la pletina", "");
+    const mE = M(v.E, "Grosor de la pletina", "Es tu espesor del encargo.", true);
+    cara([[0,0,e],[A,0,e],[A,F,e],[0,F,e]], [ar([0,0,e],[A,0,e],mA), ar([0,0,e],[0,F,e],mF),
+      ar([0,F,e],[A,F,e],mA), ar([A,0,e],[A,F,e],mF)]);
+    const tx = g.taladro_x;
+    agujero(arco(tx, yc, e, r, 0, 2 * Math.PI),
+      pasante(`Su centro está a ${fmt(tx)} del extremo izquierdo y en mitad del ancho (a ${fmt(yc)} de cada borde).`),
+      [...cruz(tx, yc, e, r + 2.5), rc([0, yc, e], [tx, yc, e], fmt(tx)), rc([tx, F, e], [tx, yc, e], fmt(F - yc))]);
+    const ran = arco(r1, yc, e, r, -Math.PI / 2, Math.PI / 2).concat(arco(r0, yc, e, r, Math.PI / 2, 3 * Math.PI / 2));
+    ran.push(ran[0]);
+    agujero(ran, M(`ancho ${v.T}`, "Ranura pasante",
+      `Ancho t, el mismo que tu taladro, con los extremos redondeados. Los centros de los dos redondeos están a ${fmt(r0)} y a ${fmt(r1)} del extremo izquierdo: ${fmt(r0 - tx)} desde el centro del taladro y ${fmt(r1 - r0)} entre ellos. Va en mitad del ancho, en la misma línea que el taladro.`, true),
+      [re([r0 - r - 2.5, yc, e], [r1 + r + 2.5, yc, e]), re([r0, yc - r - 2.5, e], [r0, yc + r + 2.5, e]),
+       re([r1, yc - r - 2.5, e], [r1, yc + r + 2.5, e]), rc([tx, yc, e], [r0, yc, e], fmt(r0 - tx)),
+       rc([r0, yc, e], [r1, yc, e], fmt(r1 - r0)), rc([r0, F, e], [r0, yc, e], fmt(F - yc))]);
+    cara([[A,0,e],[A,F,e],[A,F,0],[A,0,0]], [ar([A,0,0],[A,0,e],mE), ar([A,0,0],[A,F,0],mF)]);
+    cara([[0,F,e],[A,F,e],[A,F,0],[0,F,0]], [ar([0,F,0],[0,F,e],mE), ar([0,F,0],[A,F,0],mA)]);
+  } else if (p.idx === 4) {                            // casquillo
+    const R = f.D / 2;
+    cil(R, R, 0, e, R, M(`Ø${fmt(f.D)}`, "Diámetro del casquillo", ""),
+      M(v.E, "Altura del casquillo", "Es tu espesor del encargo.", true));
+    S.push({ centro: [[R - 3, R, e], [R + 3, R, e], [R, R - 3, e], [R, R + 3, e]] });
+    const hx = R + g.excentricidad;
+    agujero(arco(hx, R, e, r, 0, 2 * Math.PI),
+      pasante(`Su centro está a ${fmt(g.excentricidad)} del centro del disco (la cruz gris). No está en el centro: ahí está la gracia.`),
+      [...cruz(R, R, e, 5), ...cruz(hx, R, e, r + 2.5), rc([R, R, e], [hx, R, e], fmt(g.excentricidad))]);
+  } else {                                             // horquilla en U
+    const { A, F, H } = f, a = g.ala, zc = e + (H - e) / 2;
+    const mA = M(fmt(A), "Ancho total", "De la cara exterior de un ala a la otra.");
+    const mF = M(fmt(F), "Fondo", "De la cara delantera a la trasera.");
+    const mH = M(fmt(H), "Altura total", "Desde el suelo hasta lo alto de las alas.");
+    const mAla = M(fmt(a), "Grosor de cada ala", "Las dos alas son iguales.");
+    const mHe = M(menos(H, v), "Altura del ala por encima de la base", `La pieza mide ${fmt(H)} de alto; la base, e (tu espesor).`, !v.eNum);
+    const mHu = M(fmt(A - 2 * a), "Ancho del hueco", `Lo que queda entre las alas: ${fmt(A)} − 2 × ${fmt(a)}. El fondo del hueco está a la altura e (tu espesor).`);
+    cara([[0,0,H],[a,0,H],[a,F,H],[0,F,H]], [ar([0,0,H],[a,0,H],mAla), ar([0,0,H],[0,F,H],mF),
+      ar([a,0,H],[a,F,H],mF), ar([0,F,H],[a,F,H],mAla)]);
+    cara([[a,0,H],[a,F,H],[a,F,e],[a,0,e]], [ar([a,0,e],[a,0,H],mHe), ar([a,0,e],[a,F,e],mF)]);
+    cara([[a,0,e],[A-a,0,e],[A-a,F,e],[a,F,e]], [ar([a,0,e],[A-a,0,e],mHu)]);
+    cara([[A-a,0,H],[A,0,H],[A,F,H],[A-a,F,H]], [ar([A-a,0,H],[A,0,H],mAla), ar([A-a,0,H],[A-a,F,H],mF),
+      ar([A,0,H],[A,F,H],mF), ar([A-a,F,H],[A,F,H],mAla)]);
+    cara([[A,0,0],[A,0,H],[A,F,H],[A,F,0]], [ar([A,0,0],[A,0,H],mH), ar([A,0,0],[A,F,0],mF)]);
+    const L = r + 2.5;
+    agujero(arcoYZ(A, F / 2, zc, r), pasante(`Atraviesa las DOS alas por el mismo eje. Está centrado en el fondo (a ${fmt(F / 2)} de la cara delantera y de la trasera) y a media altura de las alas: ${v.eNum ? fmt(zc) : `(${fmt(H)} + e)/2`} desde el suelo.`),
+      [re([A, F / 2 - L, zc], [A, F / 2 + L, zc]), re([A, F / 2, zc - L], [A, F / 2, zc + L]),
+       rc([A, F, zc], [A, F / 2, zc], fmt(F / 2)),
+       rc([A, F / 2, 0], [A, F / 2, zc], v.eNum ? fmt(zc) : `(${fmt(H)} + e)/2`, !v.eNum)]);
+    cara([[0,F,0],[A,F,0],[A,F,H],[A-a,F,H],[A-a,F,e],[a,F,e],[a,F,H],[0,F,H]],
+      [ar([0,F,0],[A,F,0],mA), ar([0,F,0],[0,F,H],mH), ar([a,F,e],[a,F,H],mHe),
+       ar([A-a,F,e],[A-a,F,H],mHe), ar([a,F,e],[A-a,F,e],mHu)]);
+  }
+  return S;
+}
+
+/* ── Dibujo e interacción ── */
+let items = [];
+function dibujar() {
+  const p = PIEZAS[actual], v = valores(), S = escena(p, v);
+  svg.innerHTML = "";
+  items = [];
+  // caja que encuadra la pieza (con margen para las burbujas)
+  const todos = [];
+  S.forEach(o => (o.cara || o.hueco || o.centro || []).forEach(q => todos.push(P(...q))));
+  const xs = todos.map(q => q[0]), ys = todos.map(q => q[1]);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const mg = 14;
+  svg.setAttribute("viewBox", `${x0 - mg} ${y0 - mg} ${x1 - x0 + 2 * mg} ${y1 - y0 + 2 * mg}`);
+  const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+  const capa = el("g", {});
+  const toque = (forma, m, area) => {
+    const id = items.length;
+    const t = el(forma.tag, Object.assign({ class: "toque" + (area ? " area" : ""), tabindex: 0,
+      role: "button", "aria-label": `${m.titulo}: ${m.valor}` }, forma.at), capa);
+    // la clave es el orden del elemento en la escena, que no cambia al escribir e o t
+    const mk = el(forma.tag, Object.assign({ class: "marca" + (seleccion.has(id) ? " sel" : "") }, forma.at), capa);
+    const it = { id, m, mk, mid: forma.mid, k: id, refs: forma.refs || [] };
+    items.push(it);
+    const accion = () => alternar(it);
+    t.addEventListener("click", accion);
+    t.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); accion(); } });
+  };
+  const linea = (a, b) => { const A = P(...a), B = P(...b);
+    return { tag: "line", at: { x1: A[0], y1: A[1], x2: B[0], y2: B[1] }, mid: [(A[0] + B[0]) / 2, (A[1] + B[1]) / 2] }; };
+  const poli = q => { const pp = q.map(x => P(...x)); const i = Math.floor(pp.length * 0.62);
+    return { tag: "polyline", at: { points: pts(q) }, mid: pp[i] }; };
+  S.forEach(o => {
+    if (o.cara) {
+      el("polygon", { points: pts(o.cara), class: "cara" }, capa);
+      (o.curvas || []).forEach(c => { el("polyline", { points: pts(c.q), class: "trazo" }, capa); toque(poli(c.q), c.m); });
+      (o.aristas || []).forEach(s => toque(linea(s.a, s.b), s.m));
+    } else if (o.hueco) {
+      el("polygon", { points: pts(o.hueco), class: "hueco" }, capa);
+      const f = poli(o.hueco); f.tag = "polygon"; f.refs = o.refs;
+      toque(f, o.m, true);
+    } else if (o.centro) {
+      const [a, b, c, d] = o.centro.map(q => P(...q));
+      el("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], class: "centro" }, capa);
+      el("line", { x1: c[0], y1: c[1], x2: d[0], y2: d[1], class: "centro" }, capa);
+    }
+  });
+  // referencias de posición de los taladros seleccionados (o de todos, si se pide)
+  ocupadas = [];
+  const capaR = el("g", {}), hechas = new Set();
+  items.filter(it => it.refs.length && (verPos.checked || seleccion.has(it.k))).forEach(it => {
+    if (hechas.has(it.refs)) return;            // la brida comparte referencias
+    hechas.add(it.refs); referencias(capaR, it.refs, cx, cy);
+  });
+  // burbujas de lo seleccionado, encima de todo
+  const capaB = el("g", {});
+  items.filter(it => seleccion.has(it.k)).forEach(it => burbuja(capaB, it, cx, cy));
+  panelDe(null);
+}
+// Etiquetas sin solaparse: cada una prueba sus posiciones candidatas y se queda con
+// la primera que no pisa a ninguna de las ya colocadas.
+let ocupadas = [];
+const anchoEt = valor => valor.length * 2.3 + 3;
+function colocar(cands, w) {
+  const libre = ([x, y]) => ocupadas.every(b => x + w / 2 + .8 < b[0] || b[2] + .8 < x - w / 2 ||
+    y + 2.6 + .8 < b[1] || b[3] + .8 < y - 2.6);
+  const p = cands.find(libre) || cands[0];
+  ocupadas.push([p[0] - w / 2, p[1] - 2.6, p[0] + w / 2, p[1] + 2.6]);
+  return p;
+}
+function etiqueta(capa, x, y, valor, enc, cands) {
+  const w = anchoEt(valor);
+  [x, y] = colocar(cands || [[x, y]], w);
+  const g = el("g", { class: "burbuja" + (enc ? " enc" : "") }, capa);
+  el("rect", { x: x - w / 2, y: y - 2.6, width: w, height: 5.2, rx: 1.2 }, g);
+  el("text", { x, y }, g).textContent = valor;
+  return [x, y];
+}
+function referencias(capa, refs, cx, cy) {
+  refs.filter(r => r.tipo === "eje").forEach(r => { const a = P(...r.a), b = P(...r.b);
+    el("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], class: "eje-ref" }, capa); });
+  refs.filter(r => r.tipo === "circ").forEach(r => {
+    el("polyline", { points: pts(arco(r.c[0], r.c[1], r.c[2], r.r, 0, 2 * Math.PI, 72)), class: "eje-ref" }, capa);
+    const q = P(r.c[0] + r.r * Math.cos(-2.1), r.c[1] + r.r * Math.sin(-2.1), r.c[2]);
+    etiqueta(capa, 0, 0, r.valor, false, [[q[0], q[1] - 4], [q[0] + 8, q[1] - 4], [q[0] - 8, q[1] - 4]]);
+  });
+  refs.filter(r => r.tipo === "cota").forEach(r => { const a = P(...r.a), b = P(...r.b), c = r.enc ? " enc" : "";
+    el("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], class: "cota-ref" + c }, capa);
+    el("circle", { cx: a[0], cy: a[1], r: .55, class: "punto-ref" + c }, capa);
+    el("circle", { cx: b[0], cy: b[1], r: .55, class: "punto-ref" + c }, capa); });
+  // las etiquetas al final, para que ninguna línea las tape
+  // la etiqueta va AL LADO de la línea (no encima), por el lado de fuera de la pieza
+  refs.filter(r => r.tipo === "cota").forEach(r => { const a = P(...r.a), b = P(...r.b);
+    const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2, L = Math.hypot(b[0] - a[0], b[1] - a[1]) || 1;
+    let nx = -(b[1] - a[1]) / L, ny = (b[0] - a[0]) / L;
+    if (nx * (mx - cx) + ny * (my - cy) < 0) { nx = -nx; ny = -ny; }
+    const w = anchoEt(r.valor), d = Math.abs(nx) * w / 2 + Math.abs(ny) * 2.6 + 0.8;
+    etiqueta(capa, 0, 0, r.valor, r.enc, [d, d + 3, -d, -d - 3].map(k => [mx + nx * k, my + ny * k])); });
+  refs.filter(r => r.tipo === "texto").forEach(r => { const q = P(...r.p);
+    etiqueta(capa, 0, 0, r.valor, false, [[q[0], q[1]], [q[0], q[1] + 5], [q[0] - 6, q[1]]]); });
+}
+function burbuja(capa, it, cx, cy) {
+  const [mx, my] = it.mid; let dx = mx - cx, dy = my - cy; const n = Math.hypot(dx, dy) || 1;
+  dx /= n; dy /= n;
+  // primero hacia fuera de la pieza; si está ocupado, girando alrededor del elemento
+  const cands = [];
+  for (const dist of [6, 9, 12]) for (const g of [0, 0.6, -0.6, 1.2, -1.2, 1.8, -1.8, Math.PI]) {
+    const c = Math.cos(g), s = Math.sin(g);
+    cands.push([mx + (dx * c - dy * s) * dist, my + (dx * s + dy * c) * dist]);
+  }
+  const g = el("g", {}, capa);
+  const lin = el("line", { x1: mx, y1: my, stroke: it.m.enc ? "var(--enc)" : "var(--cota)", "stroke-width": .25 }, g);
+  const [bx, by] = etiqueta(g, 0, 0, it.m.valor, it.m.enc, cands);
+  lin.setAttribute("x2", bx); lin.setAttribute("y2", by);
+}
+function alternar(it) {
+  if (seleccion.has(it.k)) seleccion.delete(it.k); else seleccion.add(it.k);
+  dibujar();
+  panelDe(it.m);
+}
+function panelDe(m) {
+  const p = PIEZAS[actual], v = valores();
+  if (!m) {
+    panel.innerHTML = `<h2>Pieza ${p.num} · ${p.nombre}</h2><p>${p.ops}</p>
+      <p><b style="color:var(--enc)"><i>e</i></b> = tu espesor: ${p.esp_es}.</p>
+      <p><b style="color:var(--enc)"><i>t</i></b> = tu taladro: el diámetro de ${p.tal_es}.</p>
+      <p style="color:var(--gris)">Toca la pieza para ver sus medidas.</p>`.replace(" de el ", " del ");
+    return;
+  }
+  panel.innerHTML = `<h2>${m.titulo}</h2><div class="valor${m.enc ? " enc" : ""}">${m.valor}</div><p>${m.texto}</p>`;
+}
+function elegir(k) {
+  actual = k; seleccion.clear(); inE.value = ""; inT.value = "";
+  document.querySelectorAll("#botonesPieza button").forEach((b, i) => b.setAttribute("aria-pressed", i === k));
+  dibujar();
+}
+PIEZAS.forEach((p, k) => {
+  const b = document.createElement("button"); b.type = "button";
+  b.textContent = `${p.num} · ${p.nombre}`; b.addEventListener("click", () => elegir(k));
+  document.getElementById("botonesPieza").appendChild(b);
+});
+inE.addEventListener("input", dibujar); inT.addEventListener("input", dibujar);
+verPos.addEventListener("change", dibujar);
+document.getElementById("borrar").addEventListener("click", () => { seleccion.clear(); dibujar(); });
+elegir(0);
+</script>
+<script>/* El iframe se ajusta a la altura del contenido (misma procedencia; si no, se queda como estaba). */
+(function(){function fit(){try{var f=window.frameElement;if(!f)return;var b=document.body,cs=getComputedStyle(b);var h=Math.ceil(b.getBoundingClientRect().height+parseFloat(cs.marginTop)+parseFloat(cs.marginBottom))+2;if(b.clientWidth<40||h<120)return;if(Math.abs(f.clientHeight-h)>2){f.style.height=h+'px';}}catch(e){}}window.addEventListener('load',fit);window.addEventListener('resize',fit);if(window.ResizeObserver){new ResizeObserver(fit).observe(document.body);}setTimeout(fit,400);})();</script>
+</body>
+</html>
