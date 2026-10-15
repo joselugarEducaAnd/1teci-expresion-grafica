@@ -34,6 +34,7 @@ svg{display:block;width:100%;height:auto;background:var(--fondo);border-radius:5
 .trazo{fill:none;stroke:var(--tinta);stroke-width:.55;stroke-linejoin:round}
 .hueco{fill:#e9e9ee;stroke:var(--tinta);stroke-width:.55}
 .centro{stroke:#9a9aa3;stroke-width:.2;stroke-dasharray:1.6 .5 .3 .5}
+.guia{stroke:var(--enc);stroke-width:.3;stroke-dasharray:.9 .7;opacity:.75}
 .toque{fill:none;stroke:transparent;stroke-width:3.2;cursor:pointer;pointer-events:stroke}
 .toque.area{fill:transparent;pointer-events:all}
 .toque:hover+.marca,.toque:focus+.marca{stroke:#7fa9d6}
@@ -181,14 +182,20 @@ function escena(p, v) {
     const R = f.D / 2, s = g.pestana, Rg = R - g.profundidad;
     const mD = M(`Ø${fmt(f.D)}`, "Diámetro de las pestañas", "Las dos pestañas son iguales.");
     const mS = M(fmt(s), "Grosor de cada pestaña", "Las dos pestañas miden lo mismo.");
+    const mE = M(v.E, "Ancho de la garganta", "Es tu espesor del encargo: la distancia entre las caras interiores de las dos pestañas. Desde este punto de vista la pestaña de arriba tapa la garganta, por eso se marca en el hueco que queda entre las dos pestañas.", true);
     cil(R, R, 0, s, R, mD, mS);
     cil(R, R, s, s + e, Rg, M(`Ø${fmt(2 * Rg)}`, "Diámetro del fondo de la garganta",
-      `La garganta entra ${fmt(g.profundidad)} por cada lado desde el borde de las pestañas.`),
-      M(v.E, "Ancho de la garganta", "Es tu espesor del encargo: la distancia entre las dos pestañas.", true));
+      `La garganta entra ${fmt(g.profundidad)} por cada lado desde el borde de las pestañas.`), mE);
     cil(R, R, s + e, 2 * s + e, R, mD, mS);
     agujero(arco(R, R, 2 * s + e, r, 0, 2 * Math.PI),
       pasante("Taladro central: su eje es el de la polea y atraviesa las dos pestañas y la garganta."),
       cruz(R, R, 2 * s + e, R + 2));
+    // En isométrica la pestaña de arriba tapa los costados de la garganta (las aristas
+    // que llevan e quedan ocultas y no se pueden tocar). Por eso e se toca también en el
+    // hueco entre las dos pestañas, en los contornos izquierdo y derecho, con una guía
+    // discontinua que avisa de que ahí hay una medida.
+    S.push({ guias: [-Math.PI / 4, 3 * Math.PI / 4].map(a => ar(
+      [R + R * Math.cos(a), R + R * Math.sin(a), s], [R + R * Math.cos(a), R + R * Math.sin(a), s + e], mE)) });
   } else if (p.idx === 3) {                            // pletina
     const { A, F } = f, yc = F / 2, [r0, r1] = g.ranura_x;
     const mA = M(fmt(A), "Largo de la pletina", "");
@@ -285,6 +292,9 @@ function dibujar() {
       el("polygon", { points: pts(o.hueco), class: "hueco" }, capa);
       const f = poli(o.hueco); f.tag = "polygon"; f.refs = o.refs;
       toque(f, o.m, true);
+    } else if (o.guias) {
+      o.guias.forEach(s => { const L = linea(s.a, s.b);
+        el("line", Object.assign({ class: "guia" }, L.at), capa); toque(L, s.m); });
     } else if (o.centro) {
       const [a, b, c, d] = o.centro.map(q => P(...q));
       el("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], class: "centro" }, capa);
